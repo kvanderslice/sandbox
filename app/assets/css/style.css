@@ -2538,8 +2538,24 @@ h1 {
 
 .fade-wrap {
   min-height: 1400vh;
-  background: linear-gradient(#43cea2, #185a9d);
+  background: linear-gradient(#ffffff, #ccc5be);
   color: #f0f0f0 !important;
+}
+
+.dark-bg {
+  background-color: #222;
+}
+
+#bg-img {
+  background-image: url("../images/mountains2.jpg");
+  background: linear-gradient(180deg, rgba(239, 236, 234, 0.6) 30%, #ece9e6 90%), url("../images/mountains2.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.bg-img-wrap {
+  background-image: url("../images/mountains2.jpg");
+  background: linear-gradient(180deg, rgba(239, 236, 234, 0.6) 30%, #efecea 100%), url("../images/mountains2.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .modal {
