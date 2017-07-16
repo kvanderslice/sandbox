@@ -1,0 +1,281 @@
+// _prototype.scss
+
+/** 
+* Hero Section
+**/
+.hero__prototype {
+	width: 100%;
+	height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background 1500ms ease-in-out;
+
+  h1 {
+  	span#heading-un {
+  		display: inline-block;
+  		color: #888;
+  		opacity: 1;
+  		transition: all 1500ms ease-in-out;
+
+			&.fade-out {
+				opacity: 0;
+  			transition: all 1500ms ease-in-out;
+			}
+  	}
+  }
+
+	h1#move-title {
+		margin-left: 0px;
+		transition: all 1500ms ease-in-out;
+
+		&.move-left {
+			margin-left: -108px;
+			transition: all 1500ms ease-in-out;
+		}
+	}
+
+	.hero__inner-prototype {
+		width: 100%;
+		max-width: 620px;
+		padding: 0 20px;
+		position: absolute;
+		top: 50%;
+		text-align: left;
+		margin-left: 150px;
+		color: $color-offwhite;
+		z-index: 10;
+		@include transform(translateY(-50%));
+	}
+}
+
+.img--overlay-blackout, %img--overlay-blackout {
+  position: relative;
+  
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(33, 33, 33, .88);
+    transition: all 3000ms ease-in-out;
+  }
+
+    &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(33, 33, 33, .88);
+    transition: all 3000ms ease-in-out;
+  }
+}
+
+
+/** 
+* Sections
+**/
+section.height-full {
+  height: 100vh;
+  position: relative;
+  background-color: $color-offwhite;
+  @include clearfix;
+  // opacity: 0;
+  // transform: translateY(200px);
+  // transition: 500ms ease-in-out;
+
+
+  &.fade-in {
+  	opacity: 1;
+  	transform: translateY(0);
+    transition: 500ms ease-in-out;
+  }
+
+  h1 {
+  	font-size: 40px;
+  }
+
+  .header-text {
+  	// margin-top: 10%;
+  	// margin-bottom: 8%;
+  	padding-top: 60px;
+  	margin-bottom: 100px;
+  	p {
+  		margin-top: 0px;
+  	}
+  }
+}
+
+#header-one {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: all 500ms ease-in-out;
+
+	&.fade-in {
+		opacity: 1;
+		transform: translateY(0px);
+		transition: all 500ms ease-in-out;
+	}
+}
+
+#header-two {
+	opacity: 0;
+	transform: translateY(100px);
+	transition: all 500ms ease-in-out;
+
+	&.fade-in {
+		opacity: 1;
+		transform: translateY(0px);
+		transition: all 500ms ease-in-out;
+	}
+}
+
+//Block Sections
+
+.gray-block {
+	background-color: #EDEDED;
+	height: 500px;
+	width: 55%;
+	position: relative; 
+	z-index: -1;
+}
+
+.white-block {
+	height: 200px;
+	width: 200px;
+	background-color: white;
+	position: relative;
+}
+
+.black-block-quote {
+	background-color: #222;
+	color: $color-offwhite;
+	max-width: 25%;
+	position: relative;
+
+	.block-quote-inner {
+		padding: 40px 60px;
+	}
+}
+
+.image-block-lrg {
+
+}
+
+.image-block-med {
+	height: 500px;
+	width: 700px;
+	position: relative;
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.image-block-sml {
+
+}
+
+//Left Side Settings
+.left-group-one {
+	position: relative;
+  @include clearfix;
+
+	.white-block {
+		margin-top: -325px;
+		margin-left: 225px;	
+		z-index: 2;	
+		@extend %box-shadow;
+	}
+
+	.image-block-med {
+		margin-top: -325px;
+		z-index: 1;
+		margin-left: 350px;
+		@extend %box-shadow;
+	}
+
+	.black-block-quote {
+		margin-left: 100px;
+		margin-top: -275px;
+		z-index: 3;
+		@extend %box-shadow-alt;
+	}
+}
+
+
+//Right Side Settings
+.right-group-one {
+	position: relative;
+	float: right;
+  @include clearfix;
+
+	.gray-block {
+		float: right;
+	}
+
+	.image-block-med {
+		float: right;
+		margin-top: -325px;
+		z-index: 1;
+		margin-left: 350px;
+		@extend %box-shadow;
+	}
+
+	.black-block-quote {
+		float: right;
+		margin-top: -500px;
+		z-index: 3;
+		right: -450px;
+		top: 250px;
+	}
+}
+
+
+// Simple Parallax
+.bcg-parallax {
+    padding: 450px 0;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.bcg {
+    background: url('../images/field.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    top: 0;
+    z-index: 1;
+    opacity: 0.9;
+}
+.content-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1140px;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+
+//Debug settings
+
+// #panel-one {
+// 	background-color: red;
+// }
+
+// #panel-two {
+// 	background-color: blue;
+// }
