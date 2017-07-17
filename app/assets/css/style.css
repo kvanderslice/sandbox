@@ -2038,7 +2038,7 @@ body {
   font-weight: normal;
   color: #000;
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -2624,7 +2624,8 @@ h1 {
 section.height-full {
   height: 100vh;
   position: relative;
-  background-color: #f0f0f0;
+  background-color: #fff;
+  z-index: 11;
 }
 section.height-full:after {
   content: "";
@@ -2743,13 +2744,13 @@ section.height-full .header-text p {
 }
 .right-group-one .image-block-med {
   float: right;
-  margin-top: -325px;
+  margin-top: -425px;
   z-index: 1;
   margin-left: 350px;
 }
 .right-group-one .black-block-quote {
   float: right;
-  margin-top: -500px;
+  margin-top: -625px;
   z-index: 3;
   right: -450px;
   top: 250px;
@@ -2781,6 +2782,182 @@ section.height-full .header-text p {
   max-width: 1140px;
   position: relative;
   z-index: 2;
+}
+
+#image-one {
+  transition: all 500ms ease-in-out;
+}
+
+.beacon {
+  position: absolute;
+  top: 93%;
+  right: 2%;
+  background-color: #d72027;
+  height: 1.05em;
+  width: 1.05em;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+.beacon:hover {
+  background-color: #a3181d;
+}
+.beacon:hover:before {
+  box-shadow: 0px 0px 2px 2px #d72027;
+}
+
+.beacon:before {
+  position: absolute;
+  content: "";
+  height: 1.05em;
+  width: 1.05em;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px 2px #ec232b;
+  -webkit-animation: active 2s infinite linear;
+  animation: active 2s infinite linear;
+}
+
+@-webkit-keyframes active {
+  0% {
+    -webkit-transform: scale(0.1);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: scale(2.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes active {
+  0% {
+    transform: scale(0.1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.tooltip-example {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.tooltip {
+  display: inline;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  perspective: 500px;
+}
+
+.tooltip:hover {
+  cursor: pointer;
+}
+
+.tooltip:hover .tooltip__content {
+  -webkit-transform: translate3d(-50%, -10%, 0);
+  -moz-transform: translate3d(-50%, -10%, 0);
+  -ms-transform: translate3d(-50%, -10%, 0);
+  -o-transform: translate3d(-50%, -10%, 0);
+  transform: translate3d(-50%, -10%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tooltip__content {
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  transition: all 200ms ease;
+  -webkit-transform: translate3d(-50%, 0%, 0);
+  -moz-transform: translate3d(-50%, 0%, 0);
+  -ms-transform: translate3d(-50%, 0%, 0);
+  -o-transform: translate3d(-50%, 0%, 0);
+  transform: translate3d(-50%, 0%, 0);
+  -webkit-transform-origin: 0 10px;
+  -moz-transform-origin: 0 10px;
+  -ms-transform-origin: 0 10px;
+  -o-transform-origin: 0 10px;
+  transform-origin: 0 10px;
+  background-color: #fff;
+  color: #2f2f2f;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  right: -38%;
+  opacity: 0;
+  padding: 10px 20px;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
+  bottom: 10%;
+  max-width: 200px;
+}
+
+.tooltip__content:before {
+  border-color: transparent;
+  border-top-color: #fff;
+  border-style: solid;
+  border-width: 10px;
+  content: ' ';
+  display: block;
+  height: 0;
+  left: 50%;
+  margin-left: -10px;
+  position: absolute;
+  bottom: -20px;
+  width: 0;
+}
+
+.tooltip__content:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.tooltip__content:hover {
+  -webkit-transform: rotateX(0deg) translate3d(-50%, -10%, 0);
+  -moz-transform: rotateX(0deg) translate3d(-50%, -10%, 0);
+  -ms-transform: rotateX(0deg) translate3d(-50%, -10%, 0);
+  -o-transform: rotateX(0deg) translate3d(-50%, -10%, 0);
+  transform: rotateX(0deg) translate3d(-50%, -10%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.remodal-wrapper {
+  padding: 0px;
+}
+
+.remodal {
+  height: 95vh;
+  width: 98vw;
+  max-width: 100vw;
+}
+.remodal .col-6 {
+  width: calc( 50% - 30px );
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.remodal .col-6 img {
+  max-width: 100%;
 }
 
 .modal {

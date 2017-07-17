@@ -10,7 +10,7 @@
       <h4>ICRC presents:</h4>
       <h1 id="move-title"><span id="heading-un">Un</span>known</h1>
       <h1>Desconocido</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio animi quas laborum odit est omnis quaerat officiis. Distinctio ipsum id facilis earum, optio vel, quas assumenda quia impedit accusantium veniam!</p>
+      <p id="bottom-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio animi quas laborum odit est omnis quaerat officiis. Distinctio ipsum id facilis earum, optio vel, quas assumenda quia impedit accusantium veniam!</p>
     </div>
   </div>
 </section>
@@ -24,15 +24,39 @@
   </div>
 
   <div class="left-group-one" id="left-group-one">
-    <div class="gray-block"></div>
-    <div class="white-block"></div>
-    <div class="image-block-med">
+    <div class="gray-block" id="gray-block"></div>
+    <div class="white-block" id="white-one"></div>
+    <div class="image-block-med" id="image-one">
       <img src="/assets/images/unknown.jpg" alt="">
     </div>
-    <div class="black-block-quote">
+    <div class="black-block-quote" id="quote-one">
       <div class="block-quote-inner">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque officiis rem, illum magni iure porro adipisci quia reprehenderit cum amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, deleniti accusamus quas odit dolorem culpa neque tempora architecto.</p>
       </div>
+
+<!--       <a href="#" class="beacon"></a> -->
+
+        <a href="#story-one" data-remodal-target="story-one" data-remodal-options="hashTracking: false" class="btn btn--secondary btn--icon">
+          <i class="fa fa-l fa-angle-right"></i>
+          <span class="beacon"></span>
+        </a>
+        
+
+      <!-- Beacon and Tooltip -->
+<!--       <span class="tooltip">
+       <a href="#story-one" data-remodal-target="story-one" data-remodal-options="hashTracking: false" class="beacon"></a>
+        <span class="tooltip__content">
+          <p><a href=""><em>lorem ipsum dolor sit amet</em></a></p> 
+        </span>       
+      </span> -->
+
+
+<!-- <a href="#story-one" data-remodal-target="story-one" data-remodal-options="hashTracking: false" class="btn btn--secondary btn--icon">
+  <i class="fa fa-l fa-angle-right"></i>
+  <span>Let's Talk</span>
+</a>
+ -->
+
     </div>
   </div>
 </section>
@@ -100,10 +124,10 @@
 
   <div class="right-group-one" id="right-group-one">
     <div class="gray-block"></div>
-    <div class="image-block-med">
+    <div class="image-block-med" id="image-one">
       <img src="/assets/images/unknown.jpg" alt="">
     </div>
-    <div class="black-block-quote">
+    <div class="black-block-quote" id="quote-one">
       <div class="block-quote-inner">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque officiis rem, illum magni iure porro adipisci quia reprehenderit cum amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, deleniti accusamus quas odit dolorem culpa neque tempora architecto.</p>
       </div>
@@ -111,5 +135,55 @@
   </div>
 </section>
 
+<!-- <a href="#contact" data-remodal-target="contact" data-remodal-options="hashTracking: false" class="btn btn--secondary btn--icon">
+  <i class="fa fa-l fa-angle-right"></i>
+  <span>Let's Talk</span>
+</a>
+
+<div class="remodal" data-remodal-id="contact">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>Contact</h1>
+</div>
+ -->
+
+
+<!-- All Modals -->
+<div class="remodal" data-remodal-id="story-one">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <div class="row">
+    <div class="col-6">
+      <h2>This is the story</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eos ea sint ex iure. Quod itaque placeat illum unde, fuga temporibus dignissimos amet sapiente veritatis, est excepturi odit eaque? Illo?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus et rerum dignissimos optio iure totam unde reiciendis. Itaque sunt, quod ex ipsum, deleniti ab a, magni accusantium consectetur sit beatae!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid vero est voluptatibus ea, eum deserunt omnis minima nobis, ipsam repudiandae quae odio asperiores beatae corporis accusamus distinctio obcaecati nam! Esse.</p>
+      <h2>More about the story</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eos ea sint ex iure. Quod itaque placeat illum unde, fuga temporibus dignissimos amet sapiente veritatis, est excepturi odit eaque? Illo?</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus et rerum dignissimos optio iure totam unde reiciendis. Itaque sunt, quod ex ipsum, deleniti ab a, magni accusantium consectetur sit beatae!</p>
+    </div>
+    <div class="col-6">
+      <img src="/assets/images/unknown.jpg" alt="">
+    </div>
+  </div>
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid vero est voluptatibus ea, eum deserunt omnis minima nobis, ipsam repudiandae quae odio asperiores beatae corporis accusamus distinctio obcaecati nam! Esse.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi aspernatur, libero mollitia ipsum recusandae quas voluptates ad, voluptatibus eligendi quaerat error repudiandae, velit, in reprehenderit ducimus voluptas adipisci! Illo, voluptatem? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime distinctio nam, id explicabo culpa quis saepe, molestias nisi soluta maiores, ratione odio et. Blanditiis esse magnam corporis, tenetur voluptate quae.</p>
+  </div>
+</div>
+
+
+
+<!-- 
+<div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking: true">
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <h1>Remodal</h1>
+  <p>
+    Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+  </p>
+  <br>
+  <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+  <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+</div>
+
+<a data-remodal-target="modal">Call the modal with data-remodal-id="modal"</a> -->
 
 @@include("../partials/footer.tpl.html")  

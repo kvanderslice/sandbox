@@ -15,7 +15,8 @@ body {
   color: #000;
   margin:0;
   //min-width: 1080px;
-  height: 100%;
+  // height: 100%; //changed for remodal 
+  min-height: 100%;
   overflow-x: hidden;
   
   -moz-osx-font-smoothing: grayscale; 

@@ -85,7 +85,7 @@ $(document).ready(function(){
 
 	// Build Scene 
 	var sceneFour = new ScrollMagic.Scene({
-		triggerElement: '#panel-one',
+		triggerElement: '#bottom-p',
 		duration: '100%',
 		reverse: false
 	})
@@ -120,7 +120,22 @@ $(document).ready(function(){
 		.addTo(controller);
 
 
-});
+
+// Build Scene using Timeline
+var movingTl = new TimelineMax(); 
+movingTl
+	.fromTo('#image-one', 3, {y: 200, autoAlpha: 1}, {y: -400, autoAlpha: .8, ease:SlowMo.ease, delay: 0.1}, 0.4)
+	.from('#white-one', 2, {y: 100, ease:Power0.easeNone}, 0)
+;
+
+var movingBlocks = new ScrollMagic.Scene({
+	triggerElement: '.left-group-one',
+	duration: '100%'
+})
+
+.setTween(movingTl)
+.addTo(controller); 
+
 
 
 // Looping through elements to trigger multiple events
@@ -142,6 +157,10 @@ $(document).ready(function(){
 // 	})
 // 	.addTo(controller);
 
-// });
+});
+
+
+
+
 
 
